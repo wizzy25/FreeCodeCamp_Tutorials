@@ -1,0 +1,1 @@
+This is the readme of the FreeCodeCamp. Project will consist of many files, and will be updated from time to time.
