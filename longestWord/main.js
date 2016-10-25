@@ -5,9 +5,11 @@ window.alert('Welcome');
 var form1 = document.getElementById("form");
 var text = document.getElementById('text');
 
+// Prevent form submit from refreshing page
 form1.addEventListener('submit', function(e) {
   e.preventDefault();
 
+  //Declare variables
   var msg = '';
   var mySentence = text.value;
 
@@ -17,7 +19,7 @@ form1.addEventListener('submit', function(e) {
     document.getElementById('message').innerHTML = msg;
     return;
   }
-
+  //Gets the text fom the mySentence variable and saves the words to 'words'
   var words = mySentence.split(' ');
   var wordLength = words.map(function(word) {
     return word.length;
@@ -33,9 +35,9 @@ form1.addEventListener('submit', function(e) {
       longestWords.push(words[i]);
     }
   }
-  //Output result to the browser
+  //Prepare the result (output) and save it to msg
   if (longestWords.length === 1) {
-    msg = '<p>The longest word in the sentence is: ' + longestWords[0] + ' with ' + longestWords[0].length + ' characters.</p>';
+    msg = '<p>The longest word in the sentence is: <strong>' + longestWords[0] + '</strong> with ' + longestWords[0].length + ' characters.</p>';
   }
   else if (longestWords.length >= 1) {
     msg = '<p>The longest words in the sentence are: \n<ol>';
@@ -44,7 +46,7 @@ form1.addEventListener('submit', function(e) {
     }
     msg += '</ol></p>';
   }
-
+  //Display the result
   document.getElementById('message').innerHTML = msg;
 });
 });
