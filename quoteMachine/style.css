@@ -1,0 +1,40 @@
+body {
+	background-color: #86b3f9;
+}
+.button {
+	background-color: pink;
+    border: mediumvioletred solid 2px;
+    display: inline-block;
+    width: 25vw;
+    height: 10vw;
+    cursor: default;
+    float: right;
+
+}
+#app {
+    text-align: center;
+    color: mediumvioletred;
+    font-size: 4vw;
+    font-family: cursive;
+    border: dashed mediumvioletred 3px;
+    background-color: white;
+    width: 80vw;
+    height: 35vw;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    overflow: visible;
+}
+.button:hover {
+    background-color: springgreen;
+}
+.button:active {
+    background-color: yellowgreen;
+}
+#author {
+	font-size: 2vw;
+	
+}
